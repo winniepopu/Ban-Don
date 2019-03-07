@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ban-Don</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Step 0: semantic-ui is used in this exercise, find its cdn in `https://cdnjs.com`. -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div>
+        <div class="row">
+            <div class="col-2">
+                <!-- <div class="path">
+                    <div class="avatar">
+                        <img src="https://www.w3cplus.com/sites/default/files/blogs/2015/1507/logo_w3cplus.png" />
+                    </div>
+                 </div> -->
+
+            </div>
+
+
+
+            <div class="col-6">
+                <div class="intro mtb-4 left transition hidden">
+                    <p class="word">「來啦！我辦一桌彭湃的好料來請！」</p>
+                    <p class="word"> 從前總會聽到隔壁的婆婆媽媽說到這句話，</p>
+                    <p class="word"> 煮上一桌桌的好菜，辦好桌上的料理， </p>
+                    <p class="word"> 讓客人飽餐一頓，那才是辦桌的重點，</p>
+                    <p class="word"> 更是開心的記憶</p>
+                    <p class="word"> 辦桌代表著儘管過去農業社會物質缺乏，</p>
+                    <p class="word"> 但大家表現出熱情好客之一面</p>
+                    <p class="word"> 不管是在自家客廳，或是請總舖師在住家附近路邊、廟埕舉辦辦桌，</p>
+                    <p class="word"> 或是不管有錢或是沒錢。台灣人總是準備最好的食材展現最熱情的招待，讓賓主盡歡。</p>
+                    <p class="word"> </p>
+                    </br>
+                    <p class="word"> 而我們也希望將這樣的辦桌的精神，展現出來</p>
+
+
+                    <!-- <a class="btn-intro" href="#">More</a> -->
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="Title">
+                    <h1 class="big one transition hidden"> 辦 </h1>
+                    <h1 class="big two transition hidden"> 桌 </h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="chair1 transition hidden">
+            <img src="assets/media/chair.png" onmouseover="this.src='assets/media/wchair.png';" onmouseout="this.src='assets/media/chair.png';" onclick="disappear()">
+        </div>
+
+        <div class="chair2 transition hidden">
+            <img src="assets/media/chair.png" onmouseover="this.src='assets/media/wchair.png';" onmouseout="this.src='assets/media/chair.png';" onclick="disappear()">
+        </div>
+        <div class="chair3 transition hidden">
+            <img src="assets/media/chair.png" onmouseover="this.src='assets/media/wchair.png';" onmouseout="this.src='assets/media/chair.png';" onclick="disappear()">
+        </div>
+
+        <div class="chair4 transition hidden">
+            <img src="assets/media/chair.png" onmouseover="this.src='assets/media/wchair.png';" onmouseout="this.src='assets/media/chair.png';" onclick="disappear()">
+        </div>
+        <div class="chair5 transition hidden">
+            <img src="assets/media/chair.png" onmouseover="this.src='assets/media/wchair.png';" onmouseout="this.src='assets/media/chair.png';" onclick="disappear()">
+        </div>
+
+
+        <div class="table transition hidden">
+            <img src="assets/media/table 2.png">
+        </div>
+
+        <div class="meat transition hidden">
+            <img src="assets/media/meat.png">
+        </div>
+
+        <div class="left-button transition hidden">
+            <img src="assets/media/left.png">
+        </div>
+
+        <div class="right-button transition hidden">
+            <img src="assets/media/right.png">
+        </div>
+
+
+
+
+
+    </div>
+    <script>
+        function toggleMenu() {
+            var x = document.getElementById("topMenu");
+            if (x.className === "flex-between") {
+                x.className += " menu--active";
+            } else {
+                x.className = "flex-between";
+            }
+        }
+
+
+
+        // $('.intro').click(function() {
+        //     $(this).transition('fade right')
+        // })
+
+        function setTable() {
+            $('.chair1 , .chair2 ,.chair3 ,.chair4 ,.chair5 ,.table').transition('fade up', 2000);
+
+        }
+
+        function setText() {
+            $('.intro').transition('fade right', 2000);
+        }
+
+        function setTitle1() {
+            $('.one').transition('fade down', 2000);
+        }
+
+        function setTitle2() {
+            $('.two').transition('fade down', 2000);
+        }
+        //設定1秒呼叫方法，只呼叫一次方法。
+        setTimeout("setTable()", 300);
+        setTimeout("setText()", 2000);
+        setTimeout("setTitle1()", 2700);
+        setTimeout("setTitle2()", 3200);
+
+        function disappear() {
+            $('.intro').transition('fade left', 2000);
+            $('.one').transition('fade up', 2000);
+            $('.two').transition('fade up', 2000);
+            move1();
+            setTimeout("meat_appear()", 1800)
+
+
+        }
+
+        function meat_appear() {
+            $('.meat').transition('scale', 1000);
+            $('.left-button').transition('scale', 1000);
+            $('.right-button').transition('scale', 1000);
+
+
+        }
+
+        function move() {
+
+
+            $('.table').animate({
+                "left": "4vw",
+                "width": "90vw",
+                "bottom": "-25vh"
+            }, 2000, function() {});
+
+            $('.chair1').animate({
+                "left": "3vw",
+                "width": "12vw",
+                "bottom": "25vh"
+            }, 2000, function() {});
+
+
+            $('.chair2').animate({
+                "left": "22vw",
+                "width": "11.5vw",
+                "bottom": "48vh"
+            }, 2000, function() {});
+
+
+            $('.chair3').animate({
+                "left": "43vw",
+                "width": "11.5vw",
+                "bottom": "58vh"
+            }, 2000, function() {});
+
+
+
+            $('.chair4').animate({
+                "left": "67vw",
+                "width": "10vw",
+                "bottom": "49.5vh"
+            }, 2000, function() {});
+
+
+            $('.chair5').animate({
+                "left": "85vw",
+                "width": "12vw",
+                "bottom": "25vh"
+            }, 2000, function() {});
+
+        }
+
+        function move1() {
+
+            $('.table').animate({
+                "left": "0vw",
+                "width": "100vw",
+                "bottom": "-22vh"
+            }, 2000, function() {});
+
+            $('.chair1').animate({
+                "left": "3vw",
+                "width": "12vw",
+                "bottom": "47vh"
+            }, 2000, function() {});
+
+
+            $('.chair2').animate({
+                "left": "22vw",
+                "width": "11.5vw",
+                "bottom": "65vh"
+            }, 2000, function() {});
+
+
+            $('.chair3').animate({
+                "left": "43vw",
+                "width": "11.5vw",
+                "bottom": "75vh"
+            }, 2000, function() {});
+
+
+
+            $('.chair4').animate({
+                "left": "67vw",
+                "width": "10vw",
+                "bottom": "67vh"
+            }, 2000, function() {});
+
+
+            $('.chair5').animate({
+                "left": "85vw",
+                "width": "12vw",
+                "bottom": "47vh"
+            }, 2000, function() {});
+
+
+
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.js"></script>
+
+
+</body>
+
+</html>
+<!-- 
+<div class="container">
+        <h1 class="title">THE CAT</h1>
+        <div class="intro mtb-4 left">
+            <p class="word">「來啦！我辦一桌彭湃的好料來請！」</p>
+            <p class="word"> 從前總會聽到隔壁的婆婆媽媽說到這句話，</p>
+            <p class="word"> 煮上一桌桌的好菜，辦好桌上的料理， </p>
+            <p class="word"> 讓客人飽餐一頓，那才是辦桌的重點，</p>
+            <p class="word"> 更是開心的記憶</p>
+            <p class="word"> 辦桌代表著儘管過去農業社會物質缺乏，</p>
+            <p class="word"> 但大家表現出熱情好客之一面</p>
+            <p class="word"> 不管是在自家客廳，或是請總舖師在住家附近路邊、廟埕舉辦辦桌，</p>
+            <p class="word"> 或是不管有錢或是沒錢。台灣人總是準備最好的食材展現最熱情的招待，</p>
+            <p class="word"> 讓賓主盡歡。</p>
+            <p class="word"> 而我們也希望將這樣的辦桌的精神，展現出來</p>
+
+
+        </div>
+    </div> -->
