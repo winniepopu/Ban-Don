@@ -53,64 +53,64 @@
                     <h1 class="big one transition hidden"> 辦 </h1>
                     <h1 class="big two transition hidden"> 桌 </h1>
                 </div>
+                <div class="Title">
+                    <h1 class="bandon transition hidden"> Ban - Don </h1>
+                </div>
             </div>
         </div>
 
 
+        <div class="chairs">
+            <div class="chair transition hidden">
+                <img src="assets/media/chair.png" onmouseover="ChairMouseover()" onmouseout="ChairMouseout()" onclick="disappear()" title="入席" alt="chair1">
+            </div>
 
-        <div class="chair transition hidden">
-            <img src="assets/media/chair.png" onmouseover="this.src='assets/media/wchair.png';" onmouseout="this.src='assets/media/chair.png';" onclick="disappear()">
-        </div>
+            <div class="chair transition hidden">
+                <img src="assets/media/chair.png" onmouseover="ChairMouseover()" onmouseout="ChairMouseout()" onclick="disappear()" title="入席" alt="chair2">
+            </div>
 
-        <div class="chair transition hidden">
-            <img src="assets/media/chair.png" onmouseover="this.src='assets/media/wchair.png';" onmouseout="this.src='assets/media/chair.png';" onclick="disappear()">
-        </div>
+            <div class="chair transition hidden">
+                <img src="assets/media/chair.png" onmouseover="ChairMouseover()" onmouseout="ChairMouseout()" onclick="disappear()" title="入席" alt="chair3">
+            </div>
 
-        <div class="chair transition hidden">
-            <img src="assets/media/chair.png" onmouseover="this.src='assets/media/wchair.png';" onmouseout="this.src='assets/media/chair.png';" onclick="disappear()">
-        </div>
+            <div class="chair transition hidden">
+                <img src="assets/media/chair.png" onmouseover="ChairMouseover()" onmouseout="ChairMouseout()" onclick="disappear()" title="入席" alt="chair4">
+            </div>
 
-        <div class="chair transition hidden">
-            <img src="assets/media/chair.png" onmouseover="this.src='assets/media/wchair.png';" onmouseout="this.src='assets/media/chair.png';" onclick="disappear()">
-        </div>
+            <div class="chair transition hidden">
+                <img src="assets/media/chair.png" onmouseover="ChairMouseover()" onmouseout="ChairMouseout()" onclick="disappear()" title="入席" alt="chair5">
+            </div>
 
-        <div class="chair transition hidden">
-            <img src="assets/media/chair.png" onmouseover="this.src='assets/media/wchair.png';" onmouseout="this.src='assets/media/chair.png';" onclick="disappear()">
+            <div class="table transition hidden">
+                <img src="assets/media/table 2.png">
+            </div>
         </div>
-
-        <div class="table transition hidden">
-            <img src="assets/media/table 2.png">
-        </div>
-        <!-- 
-        <div id="meal" class="meat1 transition hidden">
-            <img src="assets/media/meat.png" onclick="meat_page(1)">
-        </div> -->
 
 
         <!-- dishes -->
         <div class="dishes">
-            <div id="meat" class="dish transition hidden">
-                <img src="assets/media/meat.png" onclick="meat_page(1)">
+            <div id="meat" class="dish transition hidden" title="東坡肉" alt="meat">
+                <img src="assets/media/meat.png" onclick="dish_page(1)">
             </div>
 
-            <div id="rice" class="dish">
-                <img src="assets/media/rice.png" onclick="meat_page(2)">
+            <div id="rice" class="dish" title="紅蟳荷葉米糕" alt="ricecake">
+                <img src="assets/media/rice.png" onclick="dish_page(2)">
             </div>
 
-            <div id="fish" class="dish ">
-                <img src="assets/media/fish.png" onclick="meat_page(3)">
+            <div id="fish" class="dish " title="清蒸魚" alt="fish">
+                <img src="assets/media/fish.png" onclick="dish_page(3)">
             </div>
 
-            <div id="veget" class="dish">
-                <img src="assets/media/veget.png" onclick="meat_page(4)">
+            <div id="veget" class="dish" title="炒青菜" alt="vegetables">
+                <img src="assets/media/veget.png" onclick="dish_page(4)">
             </div>
 
-            <div id="colddish" class="dish">
-                <img src="assets/media/colddish.png" onclick="meat_page(5)">
+            <div id="colddish" class="dish" title="冷盤" alt="colddish">
+                <img src="assets/media/colddish.png" onclick="dish_page(5)">
             </div>
 
-            <div id="fo" class="dish ">
-                <img src="assets/media/fo.png" onclick="meat_page(6)">
+            <div id="fo" class="dish " title="佛跳牆" alt="fotiaochian">
+                <img src="assets/media/fo.png" onclick="dish_page(6)">
             </div>
         </div>
 
@@ -148,10 +148,7 @@
                             <div class="mid-logo">
                                 <img src="assets/media/arrow.svg" onclick="cancel()">
                             </div>
-
-
                         </div>
-
 
                     </div>
 
@@ -159,391 +156,7 @@
             </div>
         </div>
     </div>
-    <script>
-        // $('.intro').click(function() {
-        //     $(this).transition('fade right')
-        // })
-        var now = 1;
-        var prev = 6;
-        var next = 2;
-
-        $(document).ready(function() {
-
-            setTimeout("setTable()", 300);
-            setTimeout("setText()", 2000);
-            setTimeout("setTitle1()", 2700);
-            setTimeout("setTitle2()", 3200);
-
-        })
-
-
-        function setTable() {
-            // $('.chair1 , .chair2 ,.chair3 ,.chair4 ,.chair5 ,.table').transition('fade up', 2000);
-            $('.chair,.table').transition('fade up', 2000);
-        }
-
-        function setText() {
-            $('.intro').transition('fade right', 2000);
-        }
-
-        function setTitle1() {
-            $('.one').transition('fade down', 2000);
-        }
-
-        function setTitle2() {
-            $('.two').transition('fade down', 2000);
-        }
-
-
-        function disappear() {
-            $('.bac').transition('fade', 100);
-            $('.intro').transition('fade left', 2000);
-            $('.one').transition('fade up', 2000);
-            $('.two').transition('fade up', 2000);
-            move1();
-            setTimeout("meat_appear()", 1800)
-
-        }
-
-
-        function meat_appear() {
-            $('#meat').transition('scale', 1000);
-            $('.left-button').transition('scale', 1000);
-            $('.right-button').transition('scale', 1000);
-        }
-
-        function meat_page(t) {
-            if (t == 1) {
-                $('.rec .page-pic img').attr("src", "assets/media/rmeat.png");
-                $('.rec .page-word h3').text("東坡肉");
-                $('.rec .page-word p').text("正統的東坡肉，油而不膩，入口即化，一口接一口，讓人無法放下筷子。提到東坡肉的來源，跟中國宋代的大文豪「蘇東坡」有著密不可分的關係。蘇東坡，名軾，字子瞻，是個文學家兼美食家，不只為後代留下了許多美妙的詩詞，更留下了這道美味的佳餚。");
-                $('.rec').transition('fade up', 1500);
-
-            } else if (t == 2) {
-                $('.rec .page-pic img').attr("src", "assets/media/rrice.png");
-                $('.rec .page-word h3').text("紅蟳荷葉米糕");
-                $('.rec .page-word p').text("紅蟳米糕源自福建福州的名菜，當地稱為八寶蟳飯或紅蟳八寶飯，我們今天吃的這個是用舊米、蓮子、蛋黃、蝦米等料在蒸籠內去蒸，整個紅蟳的蟹黃也都很飽滿，這道米糕是對於時間的敬意，也是考驗師傅對於選材能力。");
-                $('.rec').transition('fade up', 1500);
-            } else if (t == 3) {
-                $('.rec .page-pic img').attr("src", "assets/media/rfish.png");
-                $('.rec .page-word h3').text("清蒸魚");
-                $('.rec .page-word p').text("魚象徵著繁榮和盈餘( 年年有魚 )。除夕這一天人們準備除舊迎新，吃團圓飯。家人的團聚往往令一家之主在精神上得到安慰與滿足，老人家眼看兒孫滿堂，一家大小共敘天倫，過去的關懷與撫養子女所付出的心血總算沒有白費，這是何等的幸福。而年輕一輩，也正可以藉此機會向父母的養育之恩表達感激之情。");
-                $('.rec').transition('fade up', 1500);
-            } else if (t == 4) {
-                $('.rec .page-pic img').attr("src", "assets/media/rveget.png");
-                $('.rec .page-word h3').text("炒青菜");
-                $('.rec .page-word p').text("只要是炒青菜，空心菜、莧菜、湯匙菜、野蓮或高麗菜等菜蔬的烹調手法大同小異–菜莖菜葉挑揀開來，武火燒鍋下冷油與鹽，依據不同的菜蔬爆香蒜末、辣椒或薑絲增添層次香氣，先炒莖再炒葉，起鍋前噴灑些許米酒即可。因為是高溫爆炒，拋鍋翻滾不出幾分鐘便該盛盤，炒青菜就是該熱呼呼地吃才過癮。");
-                $('.rec').transition('fade up', 1500);
-            } else if (t == 5) {
-                $('.rec .page-pic img').attr("src", "assets/media/rcolddish.png");
-                $('.rec .page-word h3').text("冷盤");
-                $('.rec .page-word p').text("共七道冷盤，有大肉、烏魚子、蝦棗丸、螺肉、滷豬舌、海蜇花、松阪豬，承裝的七仙女盤，七仙女寓意吉祥，七道食物的烹調方式不同，食材也不重複，考驗總舖師的底蘊");
-                $('.rec').transition('fade up', 1500);
-            } else if (t == 6) {
-                $('.rec .page-pic img').attr("src", "assets/media/rfo.png");
-                $('.rec .page-word h3').text("佛跳牆");
-                $('.rec .page-word p').text("清光緒年間，一福州官錢局官員在家宴請福建按察使周蓮，主料為雞、鴨、豬等約為十多種，用紹興酒罈精心煨製而成。周蓮品嘗後讚不絕口，問及菜名，該官員說該菜取「吉祥如意、福壽雙全」之意，名「福壽全」。另一說，「福壽全」的福州腔似「佛跳牆」，遂以訛傳訛至今。");
-                $('.rec').transition('fade up', 1500);
-            }
-
-
-        }
-
-
-        function cancel() {
-            $('.rec').transition('fade down', 1000);
-        }
-
-        var n = 0;
-
-        // function prev_dish() {
-        //     n--;
-        //     smaller();
-        // }
-
-        function next_dish() {
-            // n++;
-            var this_dish = $(".dish:nth-child(" + now + ")");
-            var next_dish = $(".dish:nth-child(" + next + ")");
-
-            // 縮小
-            // 1動2動
-            // 2放大
-            smaller(this_dish);
-            rotate(this_dish, next_dish);
-            // setTimeout("rotate(this_dish,next_dish)", 1000);
-            // setTimeout("bigger(next_dish)", 2000);
-            bigger(next_dish);
-
-            next++;
-            now++;
-            prev++;
-
-            checkParameters();
-
-        }
-
-        function prev_dish() {
-            // n++;
-            var this_dish = $(".dish:nth-child(" + now + ")");
-            var last_dish = $(".dish:nth-child(" + prev + ")");
-
-            smaller(this_dish);
-            rotate_reverse(this_dish, last_dish);
-            // setTimeout("rotate(this_dish,next_dish)", 1000);
-            // setTimeout("bigger(next_dish)", 2000);
-            bigger(last_dish);
-
-            next--;
-            now--;
-            prev--;
-
-
-            checkParameters();
-
-            console.log("next:", next);
-            console.log("now:", now);
-            console.log("prev:", prev);
-
-
-        }
-
-        function checkParameters() {
-            if (next > 6) {
-                next = 1;
-            }
-            if (now > 6) {
-                now = 1;
-            }
-            if (prev > 6) {
-                prev = 1;
-            }
-
-            if (next < 1) {
-                next = 6;
-            }
-            if (now < 1) {
-                now = 6;
-            }
-            if (prev < 1) {
-                prev = 6;
-            }
-
-        }
-
-        function smaller(this_dish) {
-
-            var this_dish = $(".dish:nth-child(" + now + ")");
-            this_dish.animate({
-                "width": "16vw",
-                "left": "42vw",
-                "bottom": "2.5vh"
-            }, 1000, function() {});
-        }
-
-        function rotate(this_dish, next_dish) {
-            var arc_params = {
-                center: [44, 100],
-                radius: 24,
-                start: 180,
-                end: 0,
-                dir: -1
-            }
-            var arc_params2 = {
-                center: [55, 100],
-                radius: 40,
-                start: 0,
-                end: 200,
-                dir: -1
-            }
-
-
-
-            // var arc_params2 = {
-            //     center: [44, 100],
-            //     radius: 40,
-            //     start: 0,
-            //     end: 180,
-            //     dir: -1
-            // }
-
-            // 佛跳牆
-            var arc_params3 = {
-                center: [60, 100],
-                radius: 50,
-                start: 0,
-                end: 200,
-                dir: -1
-            }
-
-            this_dish.animate({
-                path: new $.path.arc(arc_params),
-            }, 3000);
-
-
-            if (next == 6) {
-                console.log("666")
-                next_dish.animate({
-                    path: new $.path.arc(arc_params3),
-                }, 3000);
-
-            } else {
-                next_dish.animate({
-                    path: new $.path.arc(arc_params2),
-                }, 3000);
-            }
-        }
-
-
-        function rotate_reverse(this_dish, last_dish) {
-            // var arc_params = {
-            //     center: [44, 100],
-            //     radius: 24,
-            //     start: 0,
-            //     end: 180,
-            //     dir: 1
-            // }
-            // var arc_params2 = {
-            //     center: [55, 100],
-            //         radius: 40,
-            //         start: 200,
-            //         end: 0,
-            //         dir: 1
-            //     }
-
-            var arc_params = {
-                center: [44, 100],
-                radius: 35,
-                start: 0,
-                end: 180,
-                dir: 1
-            }
-            var arc_params2 = {
-                center: [55, 100],
-                radius: 35,
-                start: 200,
-                end: 0,
-                dir: 1
-            }
-
-            // 佛跳牆
-            var arc_params3 = {
-                center: [44, 95],
-                radius: 50,
-                start: 0,
-                end: 180,
-                dir: 1
-            }
-
-            var arc_params4 = {
-                center: [55, 100],
-                radius: 44,
-                start: 200,
-                end: 0,
-                dir: 1
-            }
-
-            // this_dish.animate({
-            //     path: new $.path.arc(arc_params2),
-            // }, 3000);
-
-
-            if (now == 6) {
-                // console.log("666")
-                this_dish.animate({
-                    path: new $.path.arc(arc_params4),
-                }, 3000);
-
-            } else {
-                this_dish.animate({
-                    path: new $.path.arc(arc_params2),
-                }, 3000);
-            }
-
-
-            if (prev == 6) {
-                console.log("666")
-                last_dish.animate({
-                    path: new $.path.arc(arc_params3),
-                }, 3000);
-
-            } else {
-                last_dish.animate({
-                    path: new $.path.arc(arc_params),
-                }, 3000);
-            }
-
-
-
-        }
-
-
-        function bigger(next_dish) {
-
-            if (next == 6) {
-
-                next_dish.animate({
-                    "top": "48 vh",
-                    "width": "20vw",
-                    "left": "40vw",
-                }, 1000, function() {});
-
-            } else {
-                next_dish.animate({
-                    "top": "57 vh",
-                    "width": "27vw",
-                    "left": "36vw",
-                }, 1000, function() {});
-            }
-        }
-
-        function move1() {
-            $('.table').animate({
-                "left": "0vw",
-                "width": "100vw",
-                "bottom": "-22vh"
-            }, 2000, function() {});
-
-
-            $('.chair:nth-child(2)').animate({
-                "left": "22vw",
-                "width": "11.5vw",
-                "bottom": "65vh"
-            }, 2000, function() {});
-
-
-            $('.chair:nth-child(3)').animate({
-                "left": "43vw",
-                "width": "11.5vw",
-                "bottom": "75vh"
-            }, 2000, function() {});
-
-
-
-            $('.chair:nth-child(4)').animate({
-                "left": "67vw",
-                "width": "10vw",
-                "bottom": "67vh"
-            }, 2000, function() {});
-
-
-            $('.chair:nth-child(5)').animate({
-                "left": "85vw",
-                "width": "12vw",
-                "bottom": "47vh"
-            }, 2000, function() {});
-
-
-            $('.chair:nth-child(6)').animate({
-                "left": "3vw",
-                "width": "12vw",
-                "bottom": "47vh"
-            }, 2000, function() {});
-
-
-        }
-    </script>
-
+    <script src="assets/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.js"></script>
