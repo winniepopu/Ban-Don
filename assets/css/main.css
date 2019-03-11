@@ -7,7 +7,10 @@
 
 body {
     background-color: #bd2e32;
-    height: 100vh;
+    /* height: 150vh; */
+    overflow: hidden;
+    /* height: 100vh; */
+    /* overflow: hidden; */
 }
 
 nav li,
@@ -21,51 +24,225 @@ nav li:hover,
 }
 
 .table {
-    width: 60vw;
+    width: 60%;
     position: absolute;
     /* bottom: -150px; */
-    bottom: -25vh;
+    bottom: -13vw;
     left: -7vw;
     z-index: -1;
 }
 
 .meat {
+    /* background-color: pink; */
     width: 30vw;
     position: absolute;
     bottom: 0;
     left: 35vw;
+    z-index: 5;
 }
 
 
-.left-button{
+/* .meat {
+    background-color: pink;
+    width: 16vw;
+    position: absolute;
+    bottom: 0;
+    left: 42vw;
+    z-index: 5;
+} */
+
+
+/* 
+.fo {
+    width: 30vw;
+    position: absolute;
+    bottom: 0;
+    left: 35vw;
+    z-index: 5;
+} */
+
+.fo {
+    position: absolute;
+    bottom: -50vw;
+    left: 25vw;
+    width: 16vw;
+    z-index: 10;
+}
+
+.fo:hover {
+    cursor: pointer;
+    filter: drop-shadow(0px 1px 4px rgba(255, 255, 255, 0.9));
+    -webkit-filter: drop-shadow(0px 1px 10px rgba(255, 255, 255, 0.9));
+}
+
+.dish {
+    position: absolute;
+    bottom: -50vw;
+    left: 25vw;
+    width: 16vw;
+    z-index: 5;
+}
+
+.dish:hover {
+    cursor: pointer;
+    filter: drop-shadow(0px 1px 4px rgba(255, 255, 255, 0.9));
+    -webkit-filter: drop-shadow(0px 1px 10px rgba(255, 255, 255, 0.9));
+}
+
+#meat {
+    width: 30vw;
+    position: absolute;
+    bottom: 0;
+    left: 35vw;
+    z-index: 5;
+}
+
+
+/* .cir {
+    position: absolute;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    left: 44vw;
+    top: 100vh;
+} */
+
+.meat:hover {
+    cursor: pointer;
+    filter: drop-shadow(0px 1px 4px rgba(255, 255, 255, 0.9));
+    -webkit-filter: drop-shadow(0px 1px 10px rgba(255, 255, 255, 0.9));
+    z-index: 5;
+}
+
+.rec {
+    position: absolute;
+    z-index: 6;
+    background-color: rgba(0, 0, 0, 0.65);
+    width: 100vw;
+    height: 100vh;
+}
+
+.bac {
+    position: absolute;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100vw;
+    height: 100vh;
+}
+
+.page-pic {
+    text-align: center;
+    padding-right: 10vw;
+    height: 100vh;
+}
+
+.page-pic img {
+    /* margin: 0 auto; */
+    position: absolute;
+    width: 25vw;
+    bottom: 30vh;
+}
+
+.page-word {
+    text-align: left;
+    padding-left: 0;
+    height: 100vh;
+}
+
+.page-word .word {
+    position: absolute;
+    /* bottom: 30vh; */
+}
+
+.left-button {
     width: 6vw;
     position: absolute;
     bottom: 1vh;
     left: 30vw;
+    z-index: 5;
 }
 
-.left-button:hover{
+.left-button:hover {
+    cursor: pointer;
     filter: drop-shadow(0px 1px 4px rgba(255, 255, 255, 0.9));
--webkit-filter: drop-shadow(0px 1px 4px rgba(255, 255, 255, 0.9));
+    -webkit-filter: drop-shadow(0px 1px 4px rgba(255, 255, 255, 0.9));
+    z-index: 5;
 }
 
-
-
-.right-button{
+.right-button {
     width: 6vw;
     position: absolute;
     bottom: 1vh;
     left: 65vw;
-
+    z-index: 5;
 }
 
-.right-button:hover{
+.right-button:hover {
+    cursor: pointer;
     filter: drop-shadow(0px 1px 4px rgba(255, 255, 255, 0.9));
--webkit-filter: drop-shadow(0px 1px 4px rgba(255, 255, 255, 0.9));
+    -webkit-filter: drop-shadow(0px 1px 4px rgba(255, 255, 255, 0.9));
+    z-index: 5;
 }
 
-.chair1 {
-    /* background: url(../../assets/media/chair.png); */
+.chair {
+    position: absolute;
+    z-index: 2;
+}
+
+.chair:hover {
+    cursor: pointer;
+}
+
+.chair:first-child {
+    width: 8%;
+    position: absolute;
+    bottom: 25vw;
+    left: 1.83vw;
+    z-index: 2;
+}
+
+.chair:nth-child(2) {
+    width: 7%;
+    position: absolute;
+    bottom: 16vw;
+    left: 12.8vw;
+    z-index: 2;
+}
+
+.chair:nth-child(3) {
+    width: 7%;
+    position: absolute;
+    bottom: 16vw;
+    left: 23.79vw;
+    z-index: 2;
+}
+
+.chair:nth-child(4) {
+    width: 8%;
+    position: absolute;
+    bottom: 14vw;
+    left: 34.77vw;
+    z-index: 2;
+}
+
+.chair:nth-child(5) {
+    width: 10%;
+    position: absolute;
+    bottom: 6vw;
+    left: 47.58vw;
+    z-index: 2;
+}
+
+.chair:nth-child(6) {
+    width: 8%;
+    position: absolute;
+    bottom: 12vw;
+    left: 1.83vw;
+    z-index: 2;
+}
+
+
+/* .chair1 {
     width: 8vw;
     position: absolute;
     bottom: 25vh;
@@ -103,7 +280,7 @@ nav li:hover,
     bottom: 12vh;
     left: 47.58vw;
     z-index: 2;
-}
+} */
 
 
 /*
@@ -205,8 +382,44 @@ header {
     margin: 2.5rem 0;
 }
 
+.ft-sz20 {
+    font-size: 20px;
+}
+
+.mid-logo {
+    margin: 0 0.2rem 0 0;
+    display: inline;
+}
+
+.mid-logo img {
+    width: 2.5rem;
+}
+
+.mid-logo img:hover {
+    cursor: pointer;
+    filter: drop-shadow(0px 1px 4px rgba(255, 255, 255, 0.9));
+    -webkit-filter: drop-shadow(0px 1px 4px rgba(255, 255, 255, 0.9));
+}
+
+.cancel {
+    width: 45vw;
+    position: absolute;
+    bottom: 5vh;
+    text-align: end;
+}
+
 .mb-4 {
+    width: 35vw;
     margin-bottom: 0.5rem;
+    top: 30%;
+}
+
+.mb-4 h3 {
+    color: #dbba6d;
+    margin-bottom: 2rem;
+    /* font-family: Microsoft JhengHei; */
+    font-family: SimSun;
+    font-weight: bold;
 }
 
 .btn-intro {
@@ -302,10 +515,8 @@ footer {
         width: 100%;
         text-align: center;
     }
-
-
-/*circle*/
-/* @-webkit-keyframes spin {
+    /*circle*/
+    /* @-webkit-keyframes spin {
     to {
       -webkit-transform: rotate(1turn);
               transform: rotate(1turn);
@@ -361,5 +572,4 @@ footer {
     display: block;
     width: inherit;
   } */
-
 }
