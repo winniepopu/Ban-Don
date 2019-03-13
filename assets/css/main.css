@@ -8,7 +8,7 @@
 body {
     background-color: #bd2e32;
     /* height: 150vh; */
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .table {
@@ -287,6 +287,28 @@ a {
     cursor: pointer;
     filter: drop-shadow(0px 1px 4px rgba(255, 255, 255, 0.9));
     -webkit-filter: drop-shadow(0px 1px 4px rgba(255, 255, 255, 0.9));
+}
+
+.bac {
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+}
+
+.back {
+    width: 2.5rem;
+    position: absolute;
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.back:hover {
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.9));
+    -webkit-filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.9));
 }
 
 .cancel {

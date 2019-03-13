@@ -28,11 +28,7 @@ function setTitle2() {
 
 }
 
-// $("body").delegate(".chair", "mouseover", function(e) {
-// $(".chair").css({
-//     "backgroud-color": "white"
-// });
-// });
+
 
 function ChairMouseover() {
     $(".chair img").attr("src", "assets/media/wchair.png");
@@ -43,20 +39,16 @@ function ChairMouseout() {
 }
 
 
-// $('.chair').mouseover(function() {
-//     $(".chair img").attr("src","assets/media/wchair.png");
-
-//     // $(".chair img").css({
-//     //     "background-color": "white"
-//     // });
-
-//     // $("chair").css("backgroud-color", "white");
-// })
 
 // 按下椅子後的動作
 function disappear() {
     $(".chair").html("<img src='assets/media/chair.png'/>") //讓椅子不能再被按
-    $('.bac').transition('fade', 100); //讓椅子不能再被按
+        // $('.bac').css("display", "block");
+    $('.bac').transition('fade', 1000)
+
+
+    // setTimeout("btn_back()", 4000);
+
     $('.intro').transition('fade left', 2000);
     $('.one').transition('fade up', 2000);
     $('.two').transition('fade up', 2000);
@@ -68,6 +60,7 @@ function disappear() {
 
 }
 
+
 // 椅子桌椅移動
 function move() {
     $('.table').animate({
@@ -75,6 +68,9 @@ function move() {
         "width": "100vw",
         "bottom": "-22vh"
     }, 2000, function() {});
+
+
+
 
     $('.chair:nth-child(1)').animate({
         "left": "3vw",
@@ -110,9 +106,72 @@ function move() {
 
 }
 
-//東坡肉出現
+function back() {
+    $(".chair").html("<img src='assets/media/chair.png' onmouseover='ChairMouseover()' onmouseout='ChairMouseout()' onclick='disappear()' title='入席'>") //讓椅子不能再被按
+    $('.bac').transition('fade', 1000);
+
+    // setTimeout("btn_back()", 100);
+
+    $('.intro').transition('fade right', 2000);
+    $('.one').transition('fade down', 2000);
+    $('.two').transition('fade down', 2000);
+    $('.bandon').transition('fade down', 2000);
+
+    setTimeout("meat_disappear()", 100);
+
+
+
+    $('.table').animate({
+        "left": "-7vw",
+        "width": "60%",
+        "bottom": "-13vw"
+    }, 2000, function() {});
+
+    $('.chair:nth-child(1)').animate({
+        "left": "1.83vw",
+        "width": "8%",
+        "bottom": "12vw"
+    }, 2000, function() {});
+
+
+    $('.chair:nth-child(2)').animate({
+        "left": "12.8vw",
+        "width": "7%",
+        "bottom": "16vw"
+    }, 2000, function() {});
+
+
+    $('.chair:nth-child(3)').animate({
+        "left": "23.79vw",
+        "width": "7%",
+        "bottom": "16vw"
+    }, 2000, function() {});
+
+    $('.chair:nth-child(4)').animate({
+        "left": "34.77vw",
+        "width": "8%",
+        "bottom": "14vw"
+    }, 2000, function() {});
+
+    $('.chair:nth-child(5)').animate({
+        "left": "47.58vw",
+        "width": "10%",
+        "bottom": "6vw"
+    }, 2000, function() {});
+
+}
+
+//餐品出現
 function meat_appear() {
-    $('#meat').transition('scale', 1000);
+    $('.dish').transition('scale', 1000);
+    $('.left-button').transition('scale', 1000);
+    $('.right-button').transition('scale', 1000);
+}
+
+
+//餐品消失
+function meat_disappear() {
+    $('.dish').transition('scale', 1000);
     $('.left-button').transition('scale', 1000);
     $('.right-button').transition('scale', 1000);
 }
