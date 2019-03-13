@@ -8,7 +8,7 @@
 body {
     background-color: #bd2e32;
     /* height: 150vh; */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .table {
@@ -234,13 +234,21 @@ a {
 }
 
 .big {
+    width: 32vh;
     color: #dbba6d;
-    font-size: 180px;
+    /* font-size: 180px; */
     margin-bottom: 0rem;
     font-family: ‘cwTeXKai’, serif;
 }
 
+.one {
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+}
+
 .Title {
+    text-align: right;
+    width: 60%;
     z-index: 3;
 }
 
